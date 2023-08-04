@@ -45,13 +45,16 @@ if __name__ == "__main__":
 
     ANNOTATIONS_FILE = "./annotations.csv"
     AUDIO_DIR = "./audio"
-    SAMPLE_RATE = 22050
+    SAMPLE_RATE = 320432
     NUM_SAMPLES = 110250 
     
     if torch.cuda.is_available(): 
         device = "cuda"
     else:
         device = "cpu"
+
+    device = "cpu"
+    #i am changing the device that will execute the jobs for the training
 
     print(f"Using device {device}")
 
