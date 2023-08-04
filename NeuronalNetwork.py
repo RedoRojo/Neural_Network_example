@@ -7,10 +7,10 @@ class CNNNetwork(nn.Module):
     def __init__(self):
         super().__init__()
         # 4 conv blocks / flatten / linear / softmax
-
+        #i am adding this comment to make a change in the code so i can a commit this new change
         self.conv1 = nn.Sequential(
             nn.Conv2d(
-                in_channels=1, 
+                in_channels=2321, 
                 out_channels=16,
                 kernel_size=3, 
                 stride=1,
@@ -83,7 +83,7 @@ class FeedForwardNet(nn.Module):
         self.dense_layers = nn.Sequential(
             #sequential if a facility that comes with torch, allows to pack together multiply layers sequentiatly
 
-            nn.Linear(13824, 6912), 
+            nn.Linear(23133, 6912), 
             nn.ReLU(), # activation function
             nn.Linear(6912, 3456),
             nn.ReLU(),
