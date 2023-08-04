@@ -40,6 +40,7 @@ class AcentosDataset(Dataset):
         signal = self._right_pad_if_necessary(signal)
         signal = self._cut_if_necessary(signal)
         signal = self.transformation(signal)
+        # i don't know what to touch here so i will just comment
         return signal, label 
 
     def _cut_if_necessary(self, signal): 
